@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SnowRollerV2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{55DA0CA0-9927-4C93-8D89-4D6851B0F798}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SnowRollerV2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SnowRollerV2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{3C0809A5-3BC7-4835-A105-E3D6F214339C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SnowRollerV2">
+      <UniqueIdentifier>{38017002-2B68-4109-AAF0-40E87BC61516}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SnowRollerV2\PickUpItem.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\PickUpItem.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\SnowPickup.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\SnowPickup.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\SnowRollerV2\SnowRollerV2.Build.cs">
+      <Filter>Source\SnowRollerV2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SnowRollerV2\SnowRollerV2.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\SnowRollerV2.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\SnowRollerV2Character.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\SnowRollerV2Character.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\SnowRollerV2GameMode.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\SnowRollerV2GameMode.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\SpawnVolume.cpp">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\SpawnVolume.h">
+      <Filter>Source\SnowRollerV2</Filter>
+    </ClInclude>
+    <Filter Include="Source\SnowRollerV2\TP_Rolling">
+      <UniqueIdentifier>{0F326968-04C7-4DE5-A1B8-D045899EB25F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\SnowRollerV2\TP_Rolling\TP_Rolling.h">
+      <Filter>Source\SnowRollerV2\TP_Rolling</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\TP_Rolling\TP_RollingBall.cpp">
+      <Filter>Source\SnowRollerV2\TP_Rolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\TP_Rolling\TP_RollingBall.h">
+      <Filter>Source\SnowRollerV2\TP_Rolling</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnowRollerV2\TP_Rolling\TP_RollingGameMode.cpp">
+      <Filter>Source\SnowRollerV2\TP_Rolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnowRollerV2\TP_Rolling\TP_RollingGameMode.h">
+      <Filter>Source\SnowRollerV2\TP_Rolling</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\Definitions.SnowRollerV2.h
+Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Source\SnowRollerV2\PickUpItem.h
+Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Inc\SnowRollerV2\PickUpItem.generated.h

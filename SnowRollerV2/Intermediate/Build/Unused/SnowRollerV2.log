@@ -1,0 +1,11 @@
+﻿  Building SnowRollerV2Editor...
+  Using Visual Studio 2019 14.27.29112 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 24 processes...
+    [1/4] SnowRollerV2GameMode.cpp
+    [2/4] UE4Editor-SnowRollerV2-0035.lib
+       Creating library Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.lib and object Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.exp
+    [3/4] UE4Editor-SnowRollerV2-0035.dll
+       Creating library Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.suppressed.lib and object Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.suppressed.exp
+    [4/4] SnowRollerV2Editor.target
+  Total time in Parallel executor: 2.78 seconds
+  Total execution time: 3.28 seconds
