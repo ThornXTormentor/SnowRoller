@@ -19,10 +19,14 @@ ASnowRollerV2GameMode::ASnowRollerV2GameMode()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// set default pawn class to our Blueprinted character
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
-	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/RollingBP/Blueprints/PhysicsBallBP"));
+	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacter"));
+	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/RollingCPP/Blueprints/PhysicsBallBP"));
+
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/SnowRoller/Blueprints/SnowBallRoller"));
+
 	if (PlayerPawnBPClass.Class != NULL)
 	{
+		UE_LOG(LogClass, Warning, TEXT("Found Pawn"));
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
@@ -38,11 +42,14 @@ void ASnowRollerV2GameMode::BeginPlay()
 	TArray<AActor*> FoundActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASpawnVolume::StaticClass(), FoundActors);
 
+	UE_LOG(LogClass, Warning, TEXT(FoundActors));
+
 	for (auto Actor : FoundActors)
 	{
 		ASpawnVolume* SpawnVolumeActor = Cast<ASpawnVolume>(Actor);
 		if (SpawnVolumeActor)
 		{
+			UE_LOG(LogClass, Warning, TEXT("Found Spawn Volume"));
 			SpawnVolumeActors.AddUnique(SpawnVolumeActor);
 		}
 	}
@@ -50,10 +57,16 @@ void ASnowRollerV2GameMode::BeginPlay()
 	SetCurrentState(ESnowPlayState::EPlaying);
 
 	//Set score to beat
-	ASnowRollerV2Character* MyCharacter = Cast<ASnowRollerV2Character>(UGameplayStatics::GetPlayerPawn(this, 0));
+	ASnowRollerV2Character* MyCharacter = Cast<ASnowRollerV2Character>(UGameplayStatics::GetPlayerCharacter(this, 0));
+	
 	if (MyCharacter) 
 	{
-		EnergyToWin = (MyCharacter->GetInitialEnergy()) * 2.0f;
+		UE_LOG(LogClass, Warning, TEXT("Found Character"));
+		EnergyToWin = (MyCharacter->GetInitialEnergy()) * 2.5f;
+	}
+	else
+	{
+		UE_LOG(LogClass, Warning, TEXT("Missing Character"));
 	}
 
 	if(HUDWidgetClass != nullptr)
@@ -73,7 +86,6 @@ void ASnowRollerV2GameMode::Tick(float DeltaTime)
 
 	//Check to see if were using the player character
 	ASnowRollerV2Character* MyCharacter = Cast<ASnowRollerV2Character>(UGameplayStatics::GetPlayerPawn(this, 0));
-	UE_LOG(LogClass, Warning, TEXT("Found Function"));
 
 	if (MyCharacter) 
 	{

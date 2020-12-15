@@ -6,8 +6,12 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Components/SphereComponent.h"
 #include "Engine/CollisionProfile.h"
 #include "Engine/StaticMesh.h"
+#include <SnowRollerV2\PickUpItem.h>
+#include <SnowRollerV2\SnowPickup.h>
+#include <Runtime\Engine\Classes\GameFramework\Character.h>
 
 ATP_RollingBall::ATP_RollingBall()
 {
@@ -44,6 +48,22 @@ ATP_RollingBall::ATP_RollingBall()
 	RollTorque = 50000000.0f;
 	JumpImpulse = 350000.0f;
 	bCanJump = true; // Start being able to jump
+
+	// Create Collection Sphere for Pickups
+	CollectionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollectionSphere"));
+	CollectionSphere->AttachTo(RootComponent);
+	CollectionSphere->SetSphereRadius(100.0f);
+
+	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
+	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+
+	//Set Base energy level for the character
+	InitialEnergy = 2000.0f;
+	CharacterEnergy = InitialEnergy;
+
+	//Set the dependence of speed on energy level
+	SpeedFactor = 0.75f;
+	BaseSpeed = 10.0f;
 }
 
 
@@ -58,6 +78,8 @@ void ATP_RollingBall::SetupPlayerInputComponent(class UInputComponent* PlayerInp
 	// handle touch devices
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ATP_RollingBall::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ATP_RollingBall::TouchStopped);
+
+	PlayerInputComponent->BindAction("Collect", IE_Pressed, this, &ATP_RollingBall::CollectPickups);
 }
 
 void ATP_RollingBall::MoveRight(float Val)
@@ -108,4 +130,65 @@ void ATP_RollingBall::TouchStopped(ETouchIndex::Type FingerIndex, FVector Locati
 		Ball->AddImpulse(Impulse);
 		bCanJump = false;
 	}
+}
+
+void ATP_RollingBall::CollectPickups()
+{
+	//Get all overlapping actors and store them in an array
+	TArray<AActor*> CollectedActors;
+	CollectionSphere->GetOverlappingActors(CollectedActors);
+
+	//Keep track of collected energy
+	float CollectedEnergy = 0;
+
+	//For each actor we collected
+	for (int32 iCollected = 0; iCollected < CollectedActors.Num(); ++iCollected)
+	{
+		//Cast the actor to APickUpItem
+		APickUpItem* const TestPickup = Cast<APickUpItem>(CollectedActors[iCollected]);
+
+		//If the cast is successful AND pickup is valid and active
+		if (TestPickup && !TestPickup->IsPendingKill() && TestPickup->IsActive())
+		{
+			//Call the pickups IsCollected function
+			TestPickup->IsCollected();
+			//Check to see if pickup is Snow
+			ASnowPickup* const TestSnow = Cast<ASnowPickup>(TestPickup);
+			if (TestSnow)
+			{
+				//Increase collected power
+				CollectedEnergy += TestSnow->GetEnergy();
+			}
+			//Deactivate pickup
+			TestPickup->SetActive(false);
+		}
+	}
+
+	if (CollectedEnergy > 0)
+	{
+		UpdateEnergy(CollectedEnergy);
+	}
+
+}
+
+float ATP_RollingBall::GetInitialEnergy()
+{
+	//Reports Starting energy
+	return InitialEnergy;
+}
+
+float ATP_RollingBall::GetCurrentEnergy()
+{
+	//Reports current energy
+	return CharacterEnergy;
+}
+
+//Called whenever power is increased or decreased
+void ATP_RollingBall::UpdateEnergy(float EnergyChange)
+{
+	//Change energy
+	CharacterEnergy = CharacterEnergy + EnergyChange;
+
+	//Change speed based on energy
+	//GetCharacterMovement()->MaxWalkSpeed = BaseSpeed + (SpeedFactor * CharacterEnergy);
 }

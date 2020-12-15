@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4FEF939D,
-				0x77864B3F,
+				0x3A3AFAF1,
+				0x07421A48,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2Character() {}
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void ASnowRollerV2Character::StaticRegisterNativesASnowRollerV2Character()
 	{
@@ -194,25 +195,29 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2Character() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InitialEnergy;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RollTorque_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseLookUpRate;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RollTorque;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_JumpImpulse_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_JumpImpulse;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollectionSphere_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CollectionSphere;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FollowCamera_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SCamera_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SCamera;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SSpringArm_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SSpringArm;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SBall_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SBall;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -274,23 +279,23 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2Character() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_InitialEnergy = { "InitialEnergy", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, InitialEnergy), METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_InitialEnergy_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_InitialEnergy_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseLookUpRate_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_RollTorque_MetaData[] = {
+		{ "Category", "Ball" },
+		{ "Comment", "/** Torque to apply when trying to roll ball */" },
 		{ "ModuleRelativePath", "SnowRollerV2Character.h" },
-		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
+		{ "ToolTip", "Torque to apply when trying to roll ball" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseLookUpRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseLookUpRate_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_RollTorque = { "RollTorque", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, RollTorque), METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_RollTorque_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_RollTorque_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseTurnRate_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_JumpImpulse_MetaData[] = {
+		{ "Category", "Ball" },
+		{ "Comment", "/** Vertical impulse to apply when pressing jump */" },
 		{ "ModuleRelativePath", "SnowRollerV2Character.h" },
-		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
+		{ "ToolTip", "Vertical impulse to apply when pressing jump" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseTurnRate = { "BaseTurnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, BaseTurnRate), METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseTurnRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseTurnRate_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_JumpImpulse = { "JumpImpulse", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, JumpImpulse), METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_JumpImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_JumpImpulse_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CollectionSphere_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -303,37 +308,49 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2Character() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CollectionSphere = { "CollectionSphere", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, CollectionSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CollectionSphere_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CollectionSphere_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_FollowCamera_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Camera" },
-		{ "Comment", "/** Follow camera */" },
+		{ "Category", "Ball" },
+		{ "Comment", "/** Camera to view the ball */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SnowRollerV2Character.h" },
-		{ "ToolTip", "Follow camera" },
+		{ "ToolTip", "Camera to view the ball" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_FollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_FollowCamera_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SCamera = { "SCamera", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, SCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SCamera_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CameraBoom_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SSpringArm_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Camera" },
-		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
+		{ "Category", "Ball" },
+		{ "Comment", "/** Spring arm for positioning the camera above the ball */" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "SnowRollerV2Character.h" },
-		{ "ToolTip", "Camera boom positioning the camera behind the character" },
+		{ "ToolTip", "Spring arm for positioning the camera above the ball" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CameraBoom_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SSpringArm = { "SSpringArm", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, SSpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SSpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SSpringArm_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SBall_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Ball" },
+		{ "Comment", "/** StaticMesh used for the ball */" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SnowRollerV2Character.h" },
+		{ "ToolTip", "StaticMesh used for the ball" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SBall = { "SBall", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASnowRollerV2Character, SBall), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SBall_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SBall_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASnowRollerV2Character_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CharacterEnergy,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SpeedFactor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_InitialEnergy,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseLookUpRate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_BaseTurnRate,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_RollTorque,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_JumpImpulse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CollectionSphere,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_FollowCamera,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_CameraBoom,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SCamera,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SSpringArm,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASnowRollerV2Character_Statics::NewProp_SBall,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASnowRollerV2Character_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASnowRollerV2Character>::IsAbstract,
@@ -362,7 +379,7 @@ void EmptyLinkFunctionForGeneratedCodeSnowRollerV2Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASnowRollerV2Character, 2149852857);
+	IMPLEMENT_CLASS(ASnowRollerV2Character, 3865939671);
 	template<> SNOWROLLERV2_API UClass* StaticClass<ASnowRollerV2Character>()
 	{
 		return ASnowRollerV2Character::StaticClass();

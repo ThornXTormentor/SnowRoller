@@ -14,8 +14,78 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SNOWROLLERV2_TP_RollingBall_generated_h
 
 #define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_SPARSE_DATA
-#define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_RPC_WRAPPERS
-#define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CollectPickups(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execUpdateEnergy) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_EnergyChange); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->UpdateEnergy(Z_Param_EnergyChange); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentEnergy) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetCurrentEnergy(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetInitialEnergy) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetInitialEnergy(); \
+		P_NATIVE_END; \
+	}
+
+
+#define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCollectPickups) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CollectPickups(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execUpdateEnergy) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_EnergyChange); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->UpdateEnergy(Z_Param_EnergyChange); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetCurrentEnergy) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetCurrentEnergy(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execGetInitialEnergy) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(float*)Z_Param__Result=P_THIS->GetInitialEnergy(); \
+		P_NATIVE_END; \
+	}
+
+
 #define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATP_RollingBall(); \
@@ -61,7 +131,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATP_RollingBall); \
 #define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Ball() { return STRUCT_OFFSET(ATP_RollingBall, Ball); } \
 	FORCEINLINE static uint32 __PPO__SpringArm() { return STRUCT_OFFSET(ATP_RollingBall, SpringArm); } \
-	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ATP_RollingBall, Camera); }
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ATP_RollingBall, Camera); } \
+	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ATP_RollingBall, CollectionSphere); } \
+	FORCEINLINE static uint32 __PPO__InitialEnergy() { return STRUCT_OFFSET(ATP_RollingBall, InitialEnergy); } \
+	FORCEINLINE static uint32 __PPO__SpeedFactor() { return STRUCT_OFFSET(ATP_RollingBall, SpeedFactor); } \
+	FORCEINLINE static uint32 __PPO__BaseSpeed() { return STRUCT_OFFSET(ATP_RollingBall, BaseSpeed); } \
+	FORCEINLINE static uint32 __PPO__CharacterEnergy() { return STRUCT_OFFSET(ATP_RollingBall, CharacterEnergy); }
 
 
 #define SnowRollerV2_Source_SnowRollerV2_TP_Rolling_TP_RollingBall_h_9_PROLOG

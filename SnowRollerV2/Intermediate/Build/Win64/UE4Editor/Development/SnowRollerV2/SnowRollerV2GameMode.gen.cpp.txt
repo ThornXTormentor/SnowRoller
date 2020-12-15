@@ -1,7 +1,7 @@
-Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\Definitions.SnowRollerV2.h
+Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\Definitions.SnowRollerV2.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Source\SnowRollerV2/SnowRollerV2GameMode.h
+Z:\Unreal Projects\SnowRoller\SnowRollerV2\Source\SnowRollerV2/SnowRollerV2GameMode.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Core.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h
@@ -68,4 +68,4 @@ C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.24\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Inc\SnowRollerV2\SnowRollerV2GameMode.generated.h
+Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Inc\SnowRollerV2\SnowRollerV2GameMode.generated.h

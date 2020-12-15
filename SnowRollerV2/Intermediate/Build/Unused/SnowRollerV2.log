@@ -1,11 +1,18 @@
-﻿  Building SnowRollerV2Editor...
+﻿  Using 'git status' to determine working set for adaptive non-unity build (Z:\Unreal Projects\SnowRoller).
+  Parsing headers for SnowRollerV2Editor
+    Running UnrealHeaderTool "Z:\Unreal Projects\SnowRoller\SnowRollerV2\SnowRollerV2.uproject" "Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\SnowRollerV2Editor\Development\SnowRollerV2Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for SnowRollerV2Editor in 4.2266927 seconds
+  Building SnowRollerV2Editor...
   Using Visual Studio 2019 14.27.29112 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 24 processes...
-    [1/4] SnowRollerV2GameMode.cpp
-    [2/4] UE4Editor-SnowRollerV2-0035.lib
-       Creating library Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.lib and object Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.exp
-    [3/4] UE4Editor-SnowRollerV2-0035.dll
-       Creating library Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.suppressed.lib and object Z:\Unreal Projects\SnowRollerV2\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0035.suppressed.exp
-    [4/4] SnowRollerV2Editor.target
-  Total time in Parallel executor: 2.78 seconds
-  Total execution time: 3.28 seconds
+  Building 6 actions with 24 processes...
+    [1/6] SnowRollerV2Character.gen.cpp
+    [2/6] SnowRollerV2Character.cpp
+Z:\Unreal Projects\SnowRoller\SnowRollerV2\Source\SnowRollerV2\SnowRollerV2Character.cpp(93): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    [3/6] SnowRollerV2GameMode.cpp
+    [4/6] UE4Editor-SnowRollerV2-0006.lib
+       Creating library Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0006.lib and object Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0006.exp
+    [5/6] UE4Editor-SnowRollerV2-0006.dll
+       Creating library Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0006.suppressed.lib and object Z:\Unreal Projects\SnowRoller\SnowRollerV2\Intermediate\Build\Win64\UE4Editor\Development\SnowRollerV2\UE4Editor-SnowRollerV2-0006.suppressed.exp
+    [6/6] SnowRollerV2Editor.target
+  Total time in Parallel executor: 2.75 seconds
+  Total execution time: 7.52 seconds

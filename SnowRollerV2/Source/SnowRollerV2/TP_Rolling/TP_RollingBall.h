@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Core.h"
 #include "GameFramework/Pawn.h"
 #include "TP_RollingBall.generated.h"
 
@@ -23,6 +23,10 @@ class ATP_RollingBall : public APawn
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Ball, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* Camera;
 
+	//Collection
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class USphereComponent* CollectionSphere;
+
 public:
 	ATP_RollingBall();
 
@@ -36,6 +40,19 @@ public:
 
 	/** Indicates whether we can currently jump, use to prevent double jumping */
 	bool bCanJump;
+
+	//Accessor function for initial energy
+	UFUNCTION(BlueprintPure, Category = "Energy")
+		float GetInitialEnergy();
+
+	//Accessor function for current energy
+	UFUNCTION(BlueprintPure, Category = "Energy")
+		float GetCurrentEnergy();
+
+	//Function to update player's energy
+	//@param EnergyChange | this is the amount to change the Energy by, and it can be positive or negative
+	UFUNCTION(BlueprintCallable, Category = "Energy")
+		void UpdateEnergy(float EnergyChange);
 
 protected:
 
@@ -62,6 +79,22 @@ protected:
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
+	//Called when we press a key to collect pickups inside sphere of collectionsphere
+	UFUNCTION(BlueprintCallable, Category = "Pickup")
+		void CollectPickups();
+
+	//Starting energy for player
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Energy", Meta = (BlueprintProtected = "true"))
+		float InitialEnergy;
+
+	//Multiplier for player speed
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Energy", Meta = (BlueprintProtected = "true"))
+		float SpeedFactor;
+
+	//speed when power level is 0
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Energy", Meta = (BlueprintProtected = "true"))
+		float BaseSpeed;
+
 public:
 	/** Returns Ball subobject **/
 	FORCEINLINE class UStaticMeshComponent* GetBall() const { return Ball; }
@@ -69,4 +102,12 @@ public:
 	FORCEINLINE class USpringArmComponent* GetSpringArm() const { return SpringArm; }
 	/** Returns Camera subobject **/
 	FORCEINLINE class UCameraComponent* GetCamera() const { return Camera; }
+
+	//Collection Sphere
+	FORCEINLINE class USphereComponent* GetCollectionSphere() const { return CollectionSphere; }
+
+private:
+	//Current energy level of character
+	UPROPERTY(VisibleAnywhere, Category = "Energy")
+		float CharacterEnergy;
 };

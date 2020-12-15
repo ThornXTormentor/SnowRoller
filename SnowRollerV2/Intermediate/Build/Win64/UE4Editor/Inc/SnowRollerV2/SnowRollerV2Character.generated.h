@@ -129,8 +129,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASnowRollerV2Character); \
 
 
 #define SnowRollerV2_Source_SnowRollerV2_SnowRollerV2Character_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ASnowRollerV2Character, CameraBoom); } \
-	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ASnowRollerV2Character, FollowCamera); } \
+	FORCEINLINE static uint32 __PPO__SBall() { return STRUCT_OFFSET(ASnowRollerV2Character, SBall); } \
+	FORCEINLINE static uint32 __PPO__SSpringArm() { return STRUCT_OFFSET(ASnowRollerV2Character, SSpringArm); } \
+	FORCEINLINE static uint32 __PPO__SCamera() { return STRUCT_OFFSET(ASnowRollerV2Character, SCamera); } \
 	FORCEINLINE static uint32 __PPO__CollectionSphere() { return STRUCT_OFFSET(ASnowRollerV2Character, CollectionSphere); } \
 	FORCEINLINE static uint32 __PPO__InitialEnergy() { return STRUCT_OFFSET(ASnowRollerV2Character, InitialEnergy); } \
 	FORCEINLINE static uint32 __PPO__SpeedFactor() { return STRUCT_OFFSET(ASnowRollerV2Character, SpeedFactor); } \

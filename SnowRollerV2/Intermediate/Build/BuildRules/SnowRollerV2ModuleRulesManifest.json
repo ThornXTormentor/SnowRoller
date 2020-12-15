@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"Z:\\Unreal Projects\\SnowRollerV2\\SnowRollerV2\\Source\\SnowRollerV2\\SnowRollerV2.Build.cs",
-		"Z:\\Unreal Projects\\SnowRollerV2\\SnowRollerV2\\Source\\SnowRollerV2.Target.cs",
-		"Z:\\Unreal Projects\\SnowRollerV2\\SnowRollerV2\\Source\\SnowRollerV2Editor.Target.cs"
+		"Z:\\Unreal Projects\\SnowRoller\\SnowRollerV2\\Source\\SnowRollerV2\\SnowRollerV2.Build.cs",
+		"Z:\\Unreal Projects\\SnowRoller\\SnowRollerV2\\Source\\SnowRollerV2.Target.cs",
+		"Z:\\Unreal Projects\\SnowRoller\\SnowRollerV2\\Source\\SnowRollerV2Editor.Target.cs"
 	],
 	"EngineVersion": "4.24.3"
 }
