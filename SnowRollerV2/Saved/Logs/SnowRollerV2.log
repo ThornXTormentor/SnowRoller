@@ -611,3 +611,12 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2020.12.15-00.43.09:956][302]AssetCheck: New page: Asset Save: multiple assets
 [2020.12.15-00.43.09:956][302]LogContentValidation: Display: Validating World /Game/SnowRoller/Maps/SnowRoller.SnowRoller
 [2020.12.15-00.43.09:956][302]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/SnowRoller/Maps/SnowRoller_BuiltData.SnowRoller_BuiltData
+[2020.12.15-00.45.10:111][635]LogEditorViewport: Clicking on Actor (LMB): Landscape (Landscape1)
+[2020.12.15-00.45.43:090][571]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SnowRoller/Maps/SnowRoller" FILE="Z:/Unreal Projects/SnowRoller/SnowRollerV2/Content/SnowRoller/Maps/SnowRoller.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2020.12.15-00.45.43:121][571]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2020.12.15-00.45.43:200][571]LogSavePackage: Moving 'Z:/Unreal Projects/SnowRoller/SnowRollerV2/Saved/SnowRoller0A1B821F4BFC71EBDD22879D168A757F.tmp' to 'Z:/Unreal Projects/SnowRoller/SnowRollerV2/Content/SnowRoller/Maps/SnowRoller.umap'
+[2020.12.15-00.45.43:228][571]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/SnowRoller/Maps/SnowRoller_BuiltData" FILE="Z:/Unreal Projects/SnowRoller/SnowRollerV2/Content/SnowRoller/Maps/SnowRoller_BuiltData.uasset" SILENT=true
+[2020.12.15-00.45.43:267][571]LogSavePackage: Moving 'Z:/Unreal Projects/SnowRoller/SnowRollerV2/Saved/SnowRoller_BuiltData3446DCDD4CE8E80A1291139A0DEBE69C.tmp' to 'Z:/Unreal Projects/SnowRoller/SnowRollerV2/Content/SnowRoller/Maps/SnowRoller_BuiltData.uasset'
+[2020.12.15-00.45.43:276][571]AssetCheck: New page: Asset Save: multiple assets
+[2020.12.15-00.45.43:276][571]LogContentValidation: Display: Validating World /Game/SnowRoller/Maps/SnowRoller.SnowRoller
+[2020.12.15-00.45.43:276][571]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/SnowRoller/Maps/SnowRoller_BuiltData.SnowRoller_BuiltData
